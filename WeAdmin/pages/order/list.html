@@ -20,57 +20,22 @@
 	<body>
 		<div class="weadmin-nav">
 			<span class="layui-breadcrumb">
-        <a href="">首页</a>
-        <a href="">订单管理</a>
-        <a><cite>订单列表</cite></a>
-      </span>
+        		<a href="">首页</a>
+        		<a href="">订单管理</a>
+        		<a><cite>订单列表</cite></a>
+    		</span>
 			<a class="layui-btn layui-btn-sm" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
 				<i class="layui-icon" style="line-height:30px">ဂ</i></a>
 		</div>
 		<div class="weadmin-body">
 			<div class="layui-row">
 				<form class="layui-form layui-col-md12 we-search">
-					<div class="layui-inline">
-						<input class="layui-input" placeholder="开始日" name="start" id="start">
-					</div>
-					<div class="layui-inline">
-						<input class="layui-input" placeholder="截止日" name="end" id="end">
-					</div>
-					<div class="layui-input-inline">
-						<select name="contrller">
-							<option>支付状态</option>
-							<option>已支付</option>
-							<option>未支付</option>
-						</select>
-					</div>
-					<div class="layui-input-inline">
-						<select name="contrller">
-							<option>支付方式</option>
-							<option>支付宝</option>
-							<option>微信</option>
-							<option>货到付款</option>
-						</select>
-					</div>
-					<div class="layui-input-inline">
-						<select name="contrller">
-							<option value="">订单状态</option>
-							<option value="0">待确认</option>
-							<option value="1">已确认</option>
-							<option value="2">已收货</option>
-							<option value="3">已取消</option>
-							<option value="4">已完成</option>
-							<option value="5">已作废</option>
-						</select>
-					</div>
-					<div class="layui-inline">
-						<input type="text" name="username" placeholder="请输入订单号" autocomplete="off" class="layui-input">
-					</div>
-					<button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
 				</form>
 			</div>
 			<div class="weadmin-block">
 				<button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-				<button class="layui-btn" onclick="WeAdminShow('添加订单','./add.html')"><i class="layui-icon"></i>添加</button>
+                <button class="layui-btn" onclick="WeAdminShow('添加订单','./add.html')"><i class="layui-icon"></i>添加</button>
+                <button class="layui-btn" onclick="WeAdminShow('添加订单','./add.html')"><i class="layui-icon"></i>修改</button>
 				<span class="fr" style="line-height:40px">共有数据：88 条</span>
 			</div>
 			<table class="layui-table">
@@ -79,17 +44,17 @@
 						<th>
 							<div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
 						</th>
-						<th>订单编号</th>
-						<th>收货人</th>
-						<th>总金额</th>
-						<th>应付金额</th>
-						<th>订单状态</th>
-						<th>支付状态</th>
-						<th>发货状态</th>
-						<th>支付方式</th>
-						<th>配送方式</th>
-						<th>下单时间</th>
-						<th>操作</th>
+						<th>订单编号</th><!--TODO: 排序-->
+						<th>货品编号</th><!--TODO: 排序-->
+						<th>货品名称</th>
+						<th>数量</th>
+						<th>订单时间</th><!--TODO: 排序-->
+						<th>交货时间</th><!--TODO: 排序-->
+						<th>订单金额</th>
+						<th>已付金额</th>
+						<th>订单状态</th><!--TODO: 排序-->
+						<th>订货人</th>
+						<th>联系方式</th>
 					</tr>
 				</thead>
 				<tbody>
