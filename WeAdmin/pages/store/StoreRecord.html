@@ -66,19 +66,23 @@
             <table class="layui-table">
                 <thead>
                     <tr>
-                        <th>序号</th><!--TODO: 排序-->
-                        <th>出/入库</th>
-                        <th>物料编号</th><!--TODO: 排序-->
+                        <th>序号</th>
+                        <th>出库/入库</th>
+                        <th>物料编号</th>
                         <th>物料名称</th>
                         <th>数量</th>
                         <th>时间</th>
-                        <th>审核人</th><!--TODO: 排序-->
+                        <th>审核人</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr data-id="1">
                         <td>1</td>
-                        <td>IN</td>
+                        <td>
+                            <span class="layui-btn layui-btn-normal layui-btn-xs">
+                                入库
+                            </span>
+                        </td>
                         <td>QWER1234ASDC3</td>
                         <td>0603电阻(1K)</td>
                         <td>2000</td>
@@ -87,7 +91,11 @@
                     </tr>
                     <tr data-id="2">
                         <td>2</td>
-                        <td>OUT</td>
+                        <td>
+                            <span class="layui-btn layui-btn-danger layui-btn-xs">
+                                出库
+                            </span>
+                        </td>
                         <td>QWER1234ASDC3</td>
                         <td>0603电阻(1K)</td>
                         <td>2000</td>
