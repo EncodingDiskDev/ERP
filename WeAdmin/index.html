@@ -1,50 +1,49 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>后台管理-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
-		<meta name="renderer" content="webkit|ie-comp|ie-stand">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<meta http-equiv="Cache-Control" content="no-siteapp" />
-		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
-		<link rel="stylesheet" href="./static/css/font.css">
-		<link rel="stylesheet" href="./static/css/weadmin.css">
-		<link rel="stylesheet" href="./static/css/fontawesome-all.css">		
-		<script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
+    <head>
+        <meta charset="UTF-8">
+        <title>后台管理-WeAdmin Frame型后台管理系统-WeAdmin 1.0</title>
+        <meta name="renderer" content="webkit|ie-comp|ie-stand">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="./static/css/font.css">
+        <link rel="stylesheet" href="./static/css/weadmin.css">
+        <script type="text/javascript" src="./lib/layui/layui.js" charset="utf-8"></script>
 
-	</head>
+    </head>
 
-	<body>
-		<!-- 顶部开始 -->
-		<div class="container">
-			<div class="logo">
-				<a href="./index.html">光电码盘ERP系统</a>
-			</div>
-			<div class="left_open">
-				<i title="展开左侧栏" class="iconfont">&#xe699;</i>
-			</div>
-			<ul class="layui-nav right" lay-filter="">
-				<li class="layui-nav-item">
-					<a href="javascript:;">Admin</a>
-					<dl class="layui-nav-child">
-						<!-- 二级菜单 -->
-						<dd>
-							<a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
-						</dd>
-						<dd>
-							<a onclick="WeAdminShow('切换帐号','./login.html')">更改密码</a>
-						</dd>
-						<dd>
-							<a class="loginout" href="login.html">退出</a>
-						</dd>
-					</dl>
-				</li>
-				<li class="layui-nav-item to-index">
-					<a href="/">前台首页</a>
-				</li>
-			</ul>
+    <body>
+        <!-- 顶部开始 -->
+        <div class="container">
+            <div class="logo">
+                <a href="./index.html">光电码盘ERP系统</a>
+            </div>
+            <div class="left_open">
+                <i title="展开左侧栏" class="iconfont">&#xe699;</i>
+            </div>
+            <ul class="layui-nav right" lay-filter="">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">Admin</a>
+                    <dl class="layui-nav-child">
+                        <!-- 二级菜单 -->
+                        <dd>
+                            <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
+                        </dd>
+                        <dd>
+                            <a onclick="WeAdminShow('切换帐号','./login.html')">更改密码</a>
+                        </dd>
+                        <dd>
+                            <a class="loginout" href="login.html">退出</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item to-index">
+                    <a href="/">前台首页</a>
+                </li>
+            </ul>
 
 		</div>
 		<!-- 顶部结束 -->
@@ -232,32 +231,32 @@
 //			layui.use('admin', function(){
 //			  var admin = layui.admin;
 //			});
-			layui.config({
-			  base: './static/js/'
-			  ,version: '101100'
-			}).use('admin');
-			layui.use(['jquery','admin'], function(){
-				var $ = layui.jquery;
-				$(function(){
-					var login = JSON.parse(localStorage.getItem("login"));
-					if(login){
-						if(login=0){
-							window.location.href='./login.html';
-							return false;
-						}else{
-							return false;
-						}
-					}else{
-						window.location.href='./login.html';
-						return false;
-					}
-				});
-			});
+            layui.config({
+              base: './static/js/'
+              ,version: '101100'
+            }).use('admin');
+            layui.use(['jquery','admin'], function(){
+                var $ = layui.jquery;
+                $(function(){
+                    var login = JSON.parse(localStorage.getItem("login"));
+                    if(login){
+                        if(login=0){
+                            window.location.href='./login.html';
+                            return false;
+                        }else{
+                            return false;
+                        }
+                    }else{
+                        window.location.href='./login.html';
+                        return false;
+                    }
+                });
+            });
 
-		</script>
-	</body>
-	<!--Tab菜单右键弹出菜单-->
-	<ul class="rightMenu" id="rightMenu">
+        </script>
+    </body>
+    <!--Tab菜单右键弹出菜单-->
+    <ul class="rightMenu" id="rightMenu">
         <li data-type="fresh">刷新</li>
         <li data-type="current">关闭当前</li>
         <li data-type="other">关闭其它</li>
