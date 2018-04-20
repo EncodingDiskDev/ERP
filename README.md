@@ -5,5 +5,5 @@
     layui 2.2.0
 
 ## 业务流程图
-![业务流程图](https://github.com/EncodingDiskDev/ERP/blob/master/Docs/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
+![业务流程图](https://github.com/EncodingDiskDev/ERP/blob/cqx_alter_order_page/Docs/%E7%94%9F%E4%BA%A7%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
 
