@@ -16,140 +16,136 @@
           <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-
     <body>
+       
         <div class="weadmin-body">
-            <form class="layui-form">
-                <div class="layui-form-item">
-                    <label for="username" class="layui-form-label">
-                  <span class="we-red">*</span>用户名
-              </label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="username" name="username" required="" lay-verify="required" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="username" class="layui-form-label">
-                  <span class="we-red">*</span>收货人
-              </label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="username" name="username" required="" lay-verify="required" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="phone" class="layui-form-label">
-                  <span class="we-red">*</span>手机
-              </label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="phone" name="phone" required="" lay-verify="phone" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="username" class="layui-form-label">
-                  <span class="we-red">*</span>收货地址
-              </label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="username" name="username" required="" lay-verify="required" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="username" class="layui-form-label">
-                  <span class="we-red">*</span>配送物流
-              </label>
-                    <div class="layui-input-inline">
-                        <select id="shipping" name="shipping" class="valid">
-                            <option value="shentong">申通物流</option>
-                            <option value="shunfeng">顺丰物流</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="username" class="layui-form-label">
-                  <span class="we-red">*</span>支付方式
-              </label>
-                    <div class="layui-input-inline">
-                        <select name="contrller">
-                            <option>支付方式</option>
-                            <option>支付宝</option>
-                            <option>微信</option>
-                            <option>货到付款</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="layui-form-item">
-                    <label for="L_email" class="layui-form-label"><span class="we-red">*</span>发票抬头</label>
-                    <div class="layui-input-inline">
-                        <input type="text" id="L_email" name="email" required="" lay-verify="email" autocomplete="off" class="layui-input">
-                    </div>
-                    <div class="layui-form-mid layui-word-aux">
-                        <span class="we-red">*</span>
-                    </div>
-                </div>
-                <div class="layui-form-item layui-form-text">
-                    <label for="desc" class="layui-form-label">商品增加
-                        <a class="layui-btn layui-btn-sm layui-btn-primary" onclick="addTable();"><i class="layui-icon">&#xe608;</i> 添加</a>
-                    </label>
-                <div class="layui-input-block">
-                    <table class="layui-table" id="myTable">
-                        <thead>
-                            <tr>
-                                <th>id</th>
-                                <th>商品名称</th>
-                                <th>单价</th>
-                                <th>数量</th>
-                                <th>总价</th>
-                                <th>操作</th>
-                            </tr>
+            <fieldset class="layui-elem-field order-form"> <!-- TODO: 居中、调整表格 -->
+                <legend>新增订单</legend>
+                <div class="layui-field-box">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>联系方式</legend>
+                        <form class="layui-form">
+                            <div class="layui-form-item"> 
+                                <label for="contacter" class="layui-form-label">
+                                    <span class="we-red">*</span>联系人
+                                </label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="order-contacter" name="contacter-info" placeholder="名称" lay-verify="required" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="contacter-info" name="contacter-info" placeholder="手机号码" lay-verify="required|phone" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
                             
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>haier海尔 BC-93TMPF 93升单门冰箱</td>
-                                <td>0.01</td>
-                                <td>984</td>
-                                <td>9.84</td>
-                                <td>
-                                    <a style="cursor: pointer; color: blue;" onclick="removeTr(1)">删除</a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>haier海尔 BC-93TMPF 93升单门冰箱</td>
-                                <td>0.01</td>
-                                <td>984</td>
-                                <td>9.84</td>
-                                <td>
-                                    <a style="cursor: pointer; color: blue;" onclick="removeTr(2)">删除</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                            <div class="layui-form-item"> 
+                                <label for="receive-addr" class="layui-form-label">
+                                    <span class="we-red">*</span>收货地址
+                                </label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="receive-addr" name="receive-addr" lay-verify="required" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item"> 
+                                <label for="enddate" class="layui-form-label">
+                                    <span class="we-red">*</span>交付时间
+                                </label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="enddate" name="enddate" lay-verify="required|date" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item"> 
+                                <label for="fapiao" class="layui-form-label">
+                                    发票抬头
+                                </label>
+                                <div class="layui-input-inline">
+                                    <input type="text" id="fapiao" name="fapiao" class="layui-input">
+                                </div>
+                            </div>
+                        </form>
+        
+                    </fieldset>
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>订单明细</legend>
+                        <form class="layui-form">
+                            <div class="layui-form-item layui-form-text">
+                                <label for="desc" class="layui-form-label">订单货品
+                                    <a class="layui-btn layui-btn-sm layui-btn-primary" onclick="addTable();"><i class="layui-icon">&#xe608;</i> 添加</a>
+                                </label>
+                                <div class="layui-input-block">
+                                    <table class="layui-table" id="myTable">
+                                        <thead>
+                                            <tr>
+                                                <th>货品编号</th>
+                                                <th>商品名称</th>
+                                                <th>单价</th>
+                                                <th>数量</th>
+                                                <th>总价</th>
+                                                <th>操作</th>
+                                            </tr>
+                                            
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>haier海尔 BC-93TMPF 93升单门冰箱</td>
+                                                <td>0.01</td>
+                                                <td>984</td>
+                                                <td>9.84</td>
+                                                <td>
+                                                    <a style="cursor: pointer; color: blue;" onclick="removeTr(1)">删除</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>haier海尔 BC-93TMPF 93升单门冰箱</td>
+                                                <td>0.01</td>
+                                                <td>984</td>
+                                                <td>9.84</td>
+                                                <td>
+                                                    <a style="cursor: pointer; color: blue;" onclick="removeTr(2)">删除</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-text">
+                                <label for="desc" class="layui-form-label">备注</label>
+                                <div class="layui-input-block">
+                                    <textarea placeholder="如有特殊需求，如 配送物流、加急订单等请在此注明" id="desc" name="desc" class="layui-textarea"></textarea>
+                                </div>
+                            </div>
+                            <div class="layui-form-item">
+                                <label for="L_repass" class="layui-form-label">
+                                </label>
+                                <button class="layui-btn layui-btn-normal" lay-filter="add" lay-submit="">确定</button>
+                            </div>
+                        </form>
+                    </fieldset>
+                    
+
+
+
                 </div>
-        </div>
-        <div class="layui-form-item layui-form-text">
-            <label for="desc" class="layui-form-label">描述</label>
-            <div class="layui-input-block">
-                <textarea placeholder="请输入内容" id="desc" name="desc" class="layui-textarea"></textarea>
-            </div>
-        </div>
-        <div class="layui-form-item">
-            <label for="L_repass" class="layui-form-label">
-              </label>
-            <button class="layui-btn" lay-filter="add" lay-submit="">增加</button>
-        </div>
-        </form>
+            </fieldset>
+            
         </div>
         <script>
             layui.extend({
                 admin: '{/}../../static/js/admin'
             });
-            layui.use(['form', 'admin', 'jquery', 'table', 'layer'], function() {
+            layui.use(['form', 'admin', 'jquery', 'table', 'layer','laydate'], function() {
                 var form = layui.form,
                     admin = layui.admin,
                     $ = layui.jquery,
                     table = layui.table,
+                    laydate = layui.laydate
                     layer = layui.layer;
+
+                laydate.render({
+                    elem: '#enddate'
+                });
 
                 //自定义验证规则
                 form.verify({

@@ -10,7 +10,7 @@ layui.use(['table', 'jquery','form', 'admin'], function() {
 
     table.render({
         elem: '#orderList',
-        cellMinWidth: 80,
+        cellMinWidth: 100,
         cols: [
             [{
                 type: 'checkbox'
@@ -19,15 +19,15 @@ layui.use(['table', 'jquery','form', 'admin'], function() {
             }, {
                 field: 'name',title: '货品名称',sort: true,width:150
             }, {
-                field: 'number',title: '数量',width:80
+                field: 'number',title: '数量',sort:true,width:80
+            },  {
+                field: 'price',title: '订单金额',sort:true
             }, {
-                field: 'date',title: '订单时间',sort: true,width:150
-            }, {
-                field: 'price',title: '订单金额'
-            }, {
+                field: 'date',title: '交付时间',sort: true,width:150
+            },{
                 field: 'person',title: '订货人'
             }, {
-                field: 'status',title: '订单状态',sort: true,toolbar: '#statusTpl'
+                field: 'status',title: '订单状态',toolbar: '#statusTpl'
             }, {
                 field: 'operate',title: '操作',toolbar: '#operateTpl',unresize: true
             }]
