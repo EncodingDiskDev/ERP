@@ -17,11 +17,9 @@
         
         <div class="weadmin-body">
             <div class="layui-row left-panel">
-                <fieldset class="layui-elem-field layui-col-md3">
+                <fieldset id="ztree-container" class="layui-elem-field layui-col-md3">
                     <legend>货品分类结构</legend>
-                    <div class="layui-field-box ztree" id="treelist">
-                        
-                    </div>
+                    <div class="layui-field-box ztree" id="treelist"></div>
                 </fieldset>
                 <span class="layui-col-md9 right-panel">
                     <fieldset class="layui-elem-field layui-row">
@@ -194,18 +192,41 @@
             var zTreeObj;
             var setting = {};
             var zNodes = [
-            {name:"电路板", open:true, children:[
-                {name:"AZ09系列", open:false, children:[
-                    {name:"EB38下板PNP Z=1T"},
-                    {name:"EB38上电路板 PP 10-30V"}
+                {name:"电路板", open:true, children:[
+                    {name:"AZ09系列", open:false, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V"}
+                    ]},
+                    {name:"EB38系列", open:true, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V 12eaqddqwd"}
+                    ]}
                 ]},
-                {name:"EB38系列", open:true, children:[
-                    {name:"EB38下板PNP Z=1T"},
-                    {name:"EB38上电路板 PP 10-30V"}
+                {name:"电路板", open:true, children:[
+                    {name:"AZ09系列", open:false, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V"}
+                    ]},
+                    {name:"EB38系列", open:true, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V 12eaqddqwd"}
+                    ]}
+                ]},
+                {name:"电路板", open:true, children:[
+                    {name:"AZ09系列", open:false, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V"}
+                    ]},
+                    {name:"EB38系列", open:true, children:[
+                        {name:"EB38下板PNP Z=1T"},
+                        {name:"EB38上电路板 PP 10-30V 12eaqddqwd"}
+                    ]}
+                ]},
+                
+                
+                {name:"磁盘臂", open:false, children:[
+                    {name:"test2_1"}, {name:"test2_2"}
                 ]}
-                ]},
-            {name:"磁盘臂", open:false, children:[
-                {name:"test2_1"}, {name:"test2_2"}]}
             ];
             $(document).ready(function(){
                 zTreeObj = $.fn.zTree.init($("#treelist"), setting, zNodes);
@@ -214,6 +235,11 @@
         <style>
             .right-panel {
                 padding-left: 10px;
+            }
+            #treelist {
+                max-width: 310px;
+                max-height: 700px;
+                overflow: auto;
             }
         </style>
     </body>
