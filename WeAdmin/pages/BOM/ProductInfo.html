@@ -43,14 +43,14 @@
                                             <option value="0">中间件类</option>
                                         </select>
                                     </div>
-                                    <button class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                                    <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="search"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
                             
                             <div class="weadmin-block">
                                 <button class="layui-btn layui-btn-danger layui-btn-sm" onclick="delAll()"><i class="fas fa-trash-alt"></i> 批量删除</button>
                                 <button class="layui-btn layui-btn-sm" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="fas fa-plus"></i> 添加</button>
-                                <button class="layui-btn layui-btn-sm"><i class="fas fa-table"></i> 全部导出</button>
+                                <button class="layui-btn layui-btn-sm"><i class="fas fa-share"></i> 全部导出</button>
                                 <span class="fr" style="line-height:40px">共有数据：88 条</span>
                             </div>
                             <table class="layui-table" id="memberList">
@@ -74,9 +74,6 @@
                                         <td>微型光伏太阳能电池阵列</td>
                                         <td>能源</td>
                                         <td class="td-manage">
-                                            <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                                                <i class="fas fa-info"></i>
-                                            </a>
                                             <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 1, 600, 400)" href="javascript:;">
                                                 <i class="fas fa-edit"></i>
                                             </a>
@@ -84,8 +81,8 @@
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
                                             
-                                            <a title="导出为excel" href="javascript:;">
-                                                <i class="fas fa-table"></i>
+                                            <a title="导出BOM" href="javascript:;">
+                                                <i class="fas fa-share"></i>
                                             </a>
                                         </td>
                                     </tr>
@@ -122,12 +119,13 @@
                                             <option value="0">中间件</option>
                                         </select>
                                     </div>
-                                    <button class="layui-btn layui-btn-normal layui-btn-sm" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                                    <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="search"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
                             <div class="weadmin-block">
                                     <button class="layui-btn layui-btn-danger layui-btn-sm" onclick="delAll()"><i class="fas fa-trash-alt"></i> 批量删除</button>
-                                    <button class="layui-btn layui-btn-sm" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="fas fa-plus"></i> 添加</button>
+                                    <button class="layui-btn layui-btn-sm" onclick="WeAdminShow('添加用户','./add2.html',600,400)"><i class="fas fa-plus"></i> 添加</button>
+                                    <button class="layui-btn layui-btn-sm" ><i class="fas fa-share"></i> 全部导出</button>
                                     <span class="fr" style="line-height:40px">共有数据：88 条</span>
                             </div>
                             <table class="layui-table" id="memberList">
@@ -140,7 +138,7 @@
                                         <th>名称</th>
                                         <!--<th>性质</th> 注释掉的属性 以modal形式展示-->
                                         <th>数量</th>
-                                        <th>投料说明</th>
+                                        <!--<th>投料说明</th>-->
                                         <!--<th>工序</th>
                                         <th>备注</th>-->
                                         <th>操作</th>
@@ -154,11 +152,8 @@
                                         <td>E30OK031</td>
                                         <td>0603电阻（1KΩ）</td>
                                         <td>10</td>
-                                        <td>投料说明</td>
                                         <td class="td-manage">
-                                            <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                                                <i class="fas fa-info"></i>
-                                            </a>
+                                            
                                             <a title="编辑" onclick="WeAdminEdit('编辑','./edit.html', 1, 600, 400)" href="javascript:;">
                                                 <i class="fas fa-edit"></i>
                                             </a>
@@ -184,7 +179,7 @@
                 </span>
             </div>
         </div>
-        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="../../static/js/jquery-1.4.4.min.js"></script>
         <script src="../../lib/layui/layui.js" charset="utf-8"></script>
         <script src="../../static/js/eleDel.js" type="text/javascript" charset="utf-8"></script>
         <script src="../../static/js/jquery.ztree.all.min.js"></script>
@@ -239,6 +234,7 @@
             #treelist {
                 max-width: 310px;
                 max-height: 700px;
+                min-height: 550px;
                 overflow: auto;
             }
         </style>

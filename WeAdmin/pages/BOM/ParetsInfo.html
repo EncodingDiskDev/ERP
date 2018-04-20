@@ -41,18 +41,18 @@
                         </select>
                     </div>
                     <div class="layui-inline">
-                        <input class="layui-input" placeholder="￥" id="price-low">
+                        <input class="layui-input" placeholder="￥ 最低价" id="price-low">
                     </div> -
                     <div class="layui-inline">
-                        <input class="layui-input" placeholder="￥" id="price-high">
+                        <input class="layui-input" placeholder="￥ 最高价" id="price-high">
                     </div>
-                    <button class="layui-btn layui-btn-normal layui-btn-sm layui-btn-radius" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="search"><i class="fas fa-search"></i></button>
                 </form>
             </div>
             <div class="weadmin-block">
-
                 <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon">&#xe640;</i>批量删除</button>
-                <button class="layui-btn" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="fas fa-search"></i>新增物料</button>
+                <button class="layui-btn" onclick="WeAdminShow('添加用户','./add.html',600,400)"><i class="fas fa-plus"></i> 新增物料</button>
+                <button class="layui-btn"><i class="fas fa-share"></i> 全部导出</button>
                 <span class="fr" style="line-height:40px">共有数据：88 条</span>
             </div>
             <table class="layui-table">
@@ -65,7 +65,7 @@
                         <th>名称</th>
                         <th>类型</th>
                         <th>参考价格(元)</th>
-                        <th>备注</th>
+                        <!--<th>备注</th>-->
                         <th>操作</th>
                     </tr>
                 </thead>
@@ -78,12 +78,9 @@
                         <td>330V 变电器</td>
                         <td>供电类</td>
                         <td>120</td>
-                        <td>需搭配1000V+ 的保险丝使用</td>
+                       <!--<td>需搭配1000V+ 的保险丝使用</td>-->
                         <td class="td-manage">
-                            <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
-                                <i class="fas fa-info"></i>
-                            </a>
-                            <a title="修改" onclick="member_del(this,'要删除的id')" href="javascript:;">
+                            <a title="修改" onclick="WeAdminShow('编辑配料','./ParetsDetail.html',600,500)" href="javascript:;">
                                 <i class="fas fa-edit"></i>
                             </a>
                             <a title="删除" onclick="member_del(this,'要删除的id')" href="javascript:;">
