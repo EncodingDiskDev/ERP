@@ -10,80 +10,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link rel="stylesheet" href="../../static/css/font.css">
 		<link rel="stylesheet" href="../../static/css/weadmin.css">
-		<!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
-		<!--[if lt IE 9]>
-	      <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-	      <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
-	    <![endif]-->
 	</head>
 
 	<body>
 		<div class="weadmin-body">
 			<form class="layui-form">
 				<div class="layui-form-item">
-					<label for="L_username" class="layui-form-label">
-		                <span class="we-red">*</span>登录名
-		            </label>
+					<label for="parets-id" class="layui-form-label">
+						<span class="we-red">*</span>配料编号
+					</label>
+					<div class="layui-input-block">
+						<select name="parets-id" id="parets-id" lay-verify="required" lay-search>
+							<option value="1">1</option>
+							<option value="2">2</option>
+						</select>
+					</div>
+				</div>
+				<div class="layui-form-item">
+					<label for="parets-name" class="layui-form-label">
+						<span class="we-red">*</span>配料名称
+					</label>
 					<div class="layui-input-inline">
-						<input type="text" id="L_username" name="username" lay-verify="required|nikename" autocomplete="off" class="layui-input">
-					</div>
-					<div class="layui-form-mid layui-word-aux">
-						请设置至少5个字符，将会成为您唯一的登录名
-					</div>
-				</div>
-				<div class="layui-form-item">
-				    <label for="L_sex" class="layui-form-label">性别</label>
-				    <div class="layui-input-block" id="L_sex">
-				      <input type="radio" name="sex" value="男" title="男" checked>
-				      <input type="radio" name="sex" value="女" title="女">
-				      <input type="radio" name="sex" value="未知" title="未知">
-				    </div>
-				</div>
-
-				<div class="layui-form-item">
-					<label for="L_email" class="layui-form-label">
-		                <span class="we-red">*</span>手机
-		            </label>
-					<div class="layui-input-inline">
-						<input type="text" id="L_phone" name="phone" lay-verify="required|phone" autocomplete="off" class="layui-input">
+						<select name="parets-name" id="parets-name" lay-verify="required" lay-search>
+							<option value="EX9132R3">电阻</option>
+							<option value="HEX01932">电容</option>
+							<option value="SE20932W">电路板</option>
+							<option value="KHJU2143">隔离片</option>
+							<option value="LJ76JHD1">能源</option>
+						</select>
 					</div>
 				</div>
 				<div class="layui-form-item">
-					<label for="L_email" class="layui-form-label">
-		                <span class="we-red">*</span>邮箱
-		            </label>
-					<div class="layui-input-inline">
-						<input type="text" id="L_email" name="email" lay-verify="email" autocomplete="off" class="layui-input">
-					</div>
-
-				</div>
-				<div class="layui-form-item">
-					<label for="L_pass" class="layui-form-label">
-                  <span class="we-red">*</span>密码
-              </label>
-					<div class="layui-input-inline">
-						<input type="password" id="L_pass" name="pass" required="" lay-verify="pass" autocomplete="off" class="layui-input">
-					</div>
-					<div class="layui-form-mid layui-word-aux">
-						6到16个字符
+					<label for="parets-amount" class="layui-form-label">
+						数量
+					</label>
+					<div class="layui-input-block">
+						<input type="text" name="parets-amount" id="parets-amount" class="layui-input" lay-verify="required|number" autocomplete="off">
 					</div>
 				</div>
 				<div class="layui-form-item">
-					<label for="L_repass" class="layui-form-label">
-                  <span class="we-red">*</span>确认密码
-              </label>
-					<div class="layui-input-inline">
-						<input type="password" id="L_repass" name="repass" required="" lay-verify="repass" autocomplete="off" class="layui-input">
+					<label for="parets-note" class="layui-form-label">
+						投料说明
+					</label>
+					<div class="layui-input-block">
+						<textarea name="parets-note" id="parets-note" class="layui-textarea"></textarea>
 					</div>
 				</div>
 				<div class="layui-form-item">
-					<label for="L_repass" class="layui-form-label">
-              </label>
-					<button class="layui-btn" lay-filter="add" lay-submit="">增加</button>
+					<label for="L_repass" class="layui-form-label">              	</label>
+					<button class="layui-btn" lay-filter="add" lay-submit="">确定</button>
 				</div>
 			</form>
 		</div>
-		<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../../static/js/jquery-1.4.4.min.js"></script>
 		<script src="../../lib/layui/layui.js" charset="utf-8"></script>
 		<script type="text/javascript" src="../../static/js/admin.js"></script>
 		<script>
