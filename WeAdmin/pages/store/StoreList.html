@@ -31,6 +31,7 @@
         <div class="weadmin-body">            
             <div class="layui-row">
                 <form class="layui-form layui-col-md12 we-search">
+                    筛选 <i class="fas fa-filter"></i>
                     <div class="layui-inline">
                         <select name="city" lay-verify="">
                             <option value="">物料状态</option>
@@ -57,33 +58,32 @@
                         </select>
                     </div>
                     <div class="layui-inline">
-                        <input class="layui-input" placeholder="开始时间" name="start" id="start">
+                        <input class="layui-input" placeholder="入库时间" name="start" id="start">
                     </div>
                     <div class="layui-inline">
                         <input class="layui-input" placeholder="截止时间" name="end" id="end">
                     </div>
-                    <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
+                    <button class="layui-btn layui-btn-normal" lay-submit="" lay-filter="search"><i class="fas fa-search"></i></button>
                 </form>
             </div>
 
-            <div class="weadmin-block">
+            <!--<div class="weadmin-block">
                 <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
                 <button class="layui-btn" onclick="WeAdminShow('添加订单','./add.html')"><i class="layui-icon"></i>添加</button>
                 <span class="fr" style="line-height:40px">共有数据：88 条</span>
-            </div>
+            </div>-->
             <table class="layui-table">
                 <thead>
                     <tr>
                         <th>
                             <div class="layui-unselect header layui-form-checkbox" lay-skin="primary"><i class="layui-icon">&#xe605;</i></div>
                         </th>
-                        <th lay-data="{field:'Id', width:100, sort:true}">序号</th><!--TODO: 排序-->
                         <th>物料编号</th>
                         <th>物料名称</th>
-                        <th>数量</th><!--TODO: 排序-->
+                        <th>数量</th>
                         <th>入库时间</th>
                         <th>状态</th>
-                        <th>操作</th><!--TODO: 排序-->
+                        <th>操作</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -91,7 +91,6 @@
                         <td>
                             <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
                         </td>
-                        <td>1</td>
                         <td>E34J231JAK342</td>
                         <td>0603电阻(1K)</td>
                         <td>10000</td>
@@ -114,7 +113,6 @@
                         <td>
                             <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
                         </td>
-                        <td>2</td>
                         <td>E34J231JAK342</td>
                         <td>0603电阻(1K)</td>
                         <td>10000</td>
@@ -137,7 +135,6 @@
                             <td>
                                 <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
                             </td>
-                            <td>3</td>
                             <td>E34J231JAK342</td>
                             <td>0603电阻(1K)</td>
                             <td>100</td>
@@ -148,6 +145,7 @@
                                 </span>
                             </td>
                             <td class="td-manage">
+                                <input type="text" class="amount-input layui-input-inline" lay-verify="required|number">
                                 <a title="新增" onclick="WeAdminShow('新增','./edit.html')" href="javascript:;">
                                     <i class="fas fa-plus"></i>
                                 </a>
@@ -160,7 +158,6 @@
                                 <td>
                                     <div class="layui-unselect layui-form-checkbox" lay-skin="primary" data-id='2'><i class="layui-icon">&#xe605;</i></div>
                                 </td>
-                                <td>4</td>
                                 <td>E34J231JAK342</td>
                                 <td>0603电阻(1K)</td>
                                 <td>0</td>
@@ -197,9 +194,10 @@
             layui.extend({
                 admin: '{/}../../static/js/admin'
             });
-            layui.use(['laydate','jquery','admin'], function() {
+            layui.use(['laydate', 'jquery','admin'], function() {
                 var laydate = layui.laydate,
                     $ = layui.jquery,
+                    layer = layui.layer,
                     admin = layui.admin;
                 //执行一个laydate实例
                 laydate.render({
@@ -262,6 +260,11 @@
             });
             
         </script>
+        <style>
+            .amount-input {
+                width: 70px;
+            }
+        </style>
     </body>
 
 </html>
