@@ -31,7 +31,7 @@
                     <dl class="layui-nav-child">
                         <!-- 二级菜单 -->
                         <dd>
-                            <a onclick="WeAdminShow('个人信息','http://www.baidu.com')">个人信息</a>
+                            <a onclick="WeAdminShow('个人信息','./login.html')">个人信息</a>
                         </dd>
                         <dd>
                             <a onclick="WeAdminShow('切换帐号','./login.html')">更改密码</a>
@@ -78,7 +78,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="fas fa-clipboard-list" style="font-size:18px; padding-left:2px"></i>
-                            <cite>&nbsp;订单管理</cite>
+                            <cite>&nbsp;订单管理 <span class="layui-badge-dot"></span></cite>
                             <i class="iconfont nav_right">&#xe697;</i>
                         </a>
                         <ul class="sub-menu">
@@ -91,7 +91,7 @@
                             <li>
                                 <a _href="./pages/order/OrderList.html">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>订单列表</cite>
+                                    <cite>订单列表 <span class="layui-badge">6</span></cite>
                                 </a>
                             </li>
                         </ul>
@@ -120,7 +120,7 @@
                     <li>
                         <a href="javascript:;">
                             <i class="fas fa-shopping-cart"></i>
-                            <cite>采购管理</cite>
+                            <cite>采购管理 <span class="layui-badge-dot"></span></cite>
                             <i class="iconfont nav_right">&#xe697;</i>
                         </a>
                         <ul class="sub-menu">
@@ -133,7 +133,7 @@
                             <li>
                                 <a _href="./pages/purchase/MissBrowse.html">
                                     <i class="iconfont">&#xe6a7;</i>
-                                    <cite>缺料浏览</cite>
+                                    <cite>缺料浏览 <span class="layui-badge">6</span></cite>
                                 </a>
                             </li>
                             <li>
@@ -144,7 +144,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="javascript:;">
                             <i class="fas fa-chart-line" style="padding-left:2px"></i>
                             <cite>系统统计</cite>
@@ -206,7 +206,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
@@ -216,11 +216,11 @@
         <div class="page-content">
             <div class="layui-tab tab" lay-filter="wenav_tab" id="WeTabTip" lay-allowclose="true">
                 <ul class="layui-tab-title" id="tabName">
-                    <li>我的桌面</li>
+                    <li>产品信息</li>
                 </ul>
                 <div class="layui-tab-content">
                     <div class="layui-tab-item layui-show">
-                        <iframe src='./pages/welcome.html' frameborder="0" scrolling="yes" class="weIframe"></iframe>
+                        <iframe src='./pages/bom/ProductInfo.html' frameborder="0" scrolling="yes" class="weIframe"></iframe>
                     </div>
                 </div>
             </div>
